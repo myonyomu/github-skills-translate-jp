@@ -71,7 +71,7 @@ _「Introduction to GitHub」へようこそ! 👋_
 1. 新しいブラウザタブを開き、今開かれているこのリポジトリのページに移動します。次に、手順を読みながら、新しく開いたブラウザタブで、2番以降の手順に取り組みます。
 2. **Code**タブに移動します。
 3. `main`ブランチのドロップダウンをクリックします。
-   ![image showing my-first-branch entry](/images/my-first-branch.png)
+   ![image showing my-first-branch entry](/courses/introduction-to-github/images/my-first-branch.png)
 4. 入力欄にブランチの名前を入力します。ブランチ名は`my-first-branch`としてください。
 5. **Create branch: my-first-branch**をクリックして、ブランチを作成します。
 6. Step 2に進んでください！<br>
@@ -99,18 +99,18 @@ _おみごと！ブランチを作成することができました! 🎉_
 
 1. **Code**タブで、新しく作成したブランチである`my-first-branch`にいることを確認します。
 2. **Add file**ドロップダウンを選択し、**Create new file**をクリックします。<br>
-  ![create new file option](/images/create-new-file.png)
+  ![create new file option](/courses/introduction-to-github/images/create-new-file.png)
 3. **Name your file...** と書いてある入力欄にと`PROFILE.md`入力します。
 4. **Edit new file**と書いてあるタブのテキストエリアに、以下の内容をコピーします。
    ```
    Welcome to my GitHub profile!
    ```
-   ![profile.md file screenshot](/images/my-profile-file.png)
+   ![profile.md file screenshot](/courses/introduction-to-github/images/my-profile-file.png)
 5. コミットを行う際には、行った変更を説明する短いコミットメッセージを入力できます。これは、他の人があなたのコミットに何が含まれているかを知るのに役立ちます。GitHubは単純なデフォルトのメッセージを提供しますが、練習のために少し変更してみましょう。**Commit new file**のすぐ下のテキスト入力フィールドに、`Add PROFILE.md`と入力します。どこに何を入力すべきかを確認する場合は、下のドロップダウンを展開してください。
    <details>
    <summary> スクリーンショットを確認するには、このドロップダウンを展開してください。</summary>
 
-     ![screenshot of adding a new file with a commit message](/images/commit-full-screen.png)
+     ![screenshot of adding a new file with a commit message](/courses/introduction-to-github/images/commit-full-screen.png)
 
    </details>
 6. このレッスンでは、他のフィールドを無視して、**Commit new file**をクリックします。
@@ -139,7 +139,7 @@ _コミットを作成するという偉業を成し遂げました！✨_
 ### ⌨️ Activity: プルリクエストを作ろう
 コミットを行った後に、新しくブランチへのプッシュがあったメッセージとともに、**Compare & pull request**ボタンが表示されていることに気付いたかもしれません。
 
-![screenshot of message and button](/images/compare-and-pull-request.png)
+![screenshot of message and button](/courses/introduction-to-github/images/compare-and-pull-request.png)
 
 必要に応じて、**Compare & pull request**をクリックしてから、以下の手順6に進んでください。ボタンをクリックしない場合は、以下の手順でプルリクエストを手動で設定する手順を説明します。
 
@@ -150,11 +150,11 @@ _コミットを作成するという偉業を成し遂げました！✨_
 5. [プルリクエストの作成]をクリックします。
 6. プルリクエストにタイトルを入力してください： `Add my first file`.
 7. 次のフィールドは、行った変更の説明を提供するのに役立ちます。これまでに達成したことの説明を自由に追加してください。念のためお伝えしておくと、これまでにブランチを作成し、ファイルを作成し、コミットを行いました。<br>
-   ![screenshot showing pull request](/images/Pull-request-description.png)
+   ![screenshot showing pull request](/courses/introduction-to-github/images/Pull-request-description.png)
 8. **Create pull request**をクリックします。
 9. Step 4へ進んでください! <br>
    **注**: 以前と同様に、約20秒待ってから、このページ（指示に従っているページ）を更新すると、[GitHub Actions](https://docs.github.com/en/actions)によってこのステップが自動的に閉じられ、次のステップが開きます。結果として、プルリクエストを作成したタブでGitHub Actionsが実行されている様子を確認することができるかもしれません。以下の画像は、アクションの実行が終了した後にプルリクエストに表示される可能性のある行を示しています。<br>
-   ![screenshot of an example of an actions line](/images/Actions-to-step-4.png)
+   ![screenshot of an example of an actions line](/courses/introduction-to-github/images/Actions-to-step-4.png)
 </details>
 
 <!-- 
@@ -176,13 +176,13 @@ _素晴らしい出来栄えです! 😎_
 
 前のステップで述べたような、進行状況が自動的に次のステップに進むアクションが実行されているメッセージは確認できているでしょうか？プルリクエストをマージする前に、それが完了するのを待つ必要があります。**Merge pull request**ボタンが緑色になっていれば、準備が完了している常態です。
 
-![screenshot of green merge pull request button](/images/Green-merge-pull-request.png)
+![screenshot of green merge pull request button](/courses/introduction-to-github/images/Green-merge-pull-request.png)
 ### ⌨️ Activity: プルリクエストをマージしてみよう
 
 1. **Merge pull request**をクリックします。
 2. **Confirm merge**をクリックします。
 3. ブランチがマージされたら、もうこのブランチは必要ありません。ブランチを削除するには、**Delete branch**をクリックします。<br>
-   ![screenshot showing delete branch button](/images/delete-branch.png)
+   ![screenshot showing delete branch button](/courses/introduction-to-github/images/delete-branch.png)
 4. **Finish**ステップをチェックして、次に何を学ぶことができるかを確認してください。<br>
    **注**：以前と同様に、約20秒待ってから、このページ（指示に従っているページ）を更新すると、[GitHub Actions](https://docs.github.com/en/actions)によってこのステップが自動的に閉じられ、次のステップが開きます。
 </details>
