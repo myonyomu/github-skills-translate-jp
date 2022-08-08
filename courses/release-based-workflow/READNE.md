@@ -32,38 +32,38 @@ GitHub Releases機能を使用すると、チームはプロジェクトの履�
 <details id=1 >
 <summary><h2>Step 1: ベータ版リリースを作成してみよう</h2></summary>
 
-### The GitHub flow
+### GitHub flowについて
 
 [GitHub flow](https://guides.github.com/introduction/flow/)は、規則的なデプロイを伴うプロジェクト向けの、軽量のブランチベースのワークフローです。
 
 ![github-flow](https://user-images.githubusercontent.com/6351798/48032310-63842400-e114-11e8-8db0-06dc0504dcb5.png)
 
-一部のプロジェクトは、継続的なデプロイにより、より頻繁にデプロイされることもあります。このようなプロジェクトでは、メインブランチに新しいコミットがあるたびに「リリース」とされます。
+一部のプロジェクトは、継続的なデプロイにより、より頻繁にデプロイされることもあります。このようなプロジェクトでは、メインブランチに新しいコミットがあるたびに「リリース」とみなされるかもしれません。
 
-一方で、バージョンとリリースについて、GitHub Flowと構造が異なるプロジェクトも存在します。
+しかし、プロジェクトによっては、このようなバージョンとリリースの取り扱いをせず、異なる構造に依存しているということもあります。
 
-### バージョン
+### バージョンについて
 
-Versions are different iterations of updated software like operating systems, apps, or dependencies. Common examples are "Windows 8.1" to "Windows 10", or "macOS High Sierra" to "macOS Mojave".
+バージョンは、OS、アプリ、依存関係など、更新されるソフトウェアのさまざまな繰り返しの開発サイクルです。一般的な例は、Windowsなら「Windows 8.1」「Windows 10」、MacOSならば「macOS High Sierra」「macOS Mojave」といったものです。
 
-Developers update code and then run tests on the project for bugs. During that time, the developers might set up certain securities to protect from new code or bugs. Then, the tested code is ready for production. Teams version the code and release it for installation by end users.
+開発者はコードを更新し、プロジェクトでバグのテストを実行します。その間、開発者は新しいコードやバグから保護するために特定のセキュリティを設定する場合があります。その後、テスト済みのコードを本番環境で使用できるようになります。チームはコードをバージョン管理し、エンドユーザーがインストールできるようにリリースします。
 
-### :keyboard: Activity: Create a release for the current codebase
-In this step, you will create a release for this repository on GitHub.
+### ⌨️ Activity: 現在のコードベースのリリース作ってみよう
+このステップでは、GitHubでこのリポジトリのリリースを作成します。
 
-GitHub Releases point to a specific commit. Releases can include release notes in Markdown files, and attached binaries.
+GitHubのリリースは、特定のコミットのことを指します。リリースには、Markdownファイルのリリースノートと、バイナリを添付して含めることができます。
 
-Before using a release based workflow for a larger release, let's create a tag and a release.
+大規模なリリースにリリースベースのワークフローを使用する前に、タグとリリースを作成しましょう。
 
-1. Open a new browser tab, and work on the steps in your second tab while you read the instructions in this tab.
-1. Go to the **Releases** page for this repository.
-    - You can click the **Code** tab at the top of your repository. Then, find the navigation bar below the repository description, and click **0 releases**.
-1. Click **Create a new release**
-1. In the field for _Tag version_, specify a number. In this case, use **v0.9**. Keep the _Target_ as **main**
-1. Give the release a title, like "First beta release". If you'd like, you could also give the release a short description
-1. Select the checkbox next to **This is a pre-release**, since it is representing a beta version
-1. Click **Publish release**
-1. Wait about 20 seconds then refresh this page for the next step
+1. 新しいブラウザー タブを開き、このタブの指示を読みながら、2 番目のタブの手順に取り組みます。
+2. このリポジトリの**Releases**ページに移動します。
+  - リポジトリの上部にある**Code**タブをクリックできます。次に、リポジトリの説明の下にあるナビゲーション バーを見つけて、**0 releases**をクリックします。(※GitHubのUI変更で場所や表示が変わっている。リリースが存在しないときはリリース数が表示されなくなったため、2022/08現在では、Codeページ=>画面右側のペインからReleasesをクリックしてリリースページを開くことができる)
+3. **Create a new release**ボタンをクリックします
+4. _Tag Version_ のフィールドで、番号を指定します。この場合、**v0.9**を使用します。ターゲットは**main**のままにしておいてください。(※GitHubのUI変更で変わっている。2022/08現在では、Tag Versionフィールドではなく、Chose a Tagのトグルダウンをクリックし、v0.9を入力欄に入力して、Create new tagで新しくタグを作成する)
+5. 「最初のベータ版リリース(First beta release)」のように、リリースにタイトルを付けます。必要に応じて、リリースに簡単な説明を付けることもできます
+6. ベータ版のリリースであるため、**This is a pre-release** の横にあるチェックボックスを選択します。
+7. **Publish release**ボタンをクリックします
+8. 約20秒待つと、次のステップのためにこのページが更新されます
 
 </details>
 
