@@ -22,7 +22,7 @@ GitHub Releases機能を使用すると、チームはプロジェクトの履�
 
 1. このイントロダクションの上部にある、**Use this template**ボタンを右クリックし、新しいタブでリンクを開きます。
    ![Use this template](https://user-images.githubusercontent.com/1221423/169618716-fb17528d-f332-4fc5-a11a-eaa23562665e.png)
-2. 新しく開いたタブで、手順に従って新しいリポジトリを作成します。
+2. 新しく開いたタブで、手順に従って新しいリポジトリを作成します。(※元の文では明記されていませんが、このチュートリアルでは`Include all branches`のチェックが必須です。)
    - パブリックリポジトリを作成することをお勧めします。――プライベートリポジトリの場合、[アクションにかかった時間分だけ請求が発生します](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions)。
    ![Create a new repository](https://user-images.githubusercontent.com/1221423/169618722-406dc508-add4-4074-83f0-c7a7ad87f6f3.png)
 3. 新しいリポジトリが作成されたら、約20秒待ってから、ページを更新します。新しいリポジトリのREADMEにある手順に従って操作を行ってください。
@@ -69,39 +69,39 @@ GitHubのリリースは、特定のコミットのことを指します。リ�
 
 <!--Step 2-->
 <details id=2>
-<summary><h2>Step 2: Add a new feature to the release branch</h2></summary>
+<summary><h2>Step 2: リリースブランチに新しい機能を追加してみよう</h2></summary>
 
-### Release management
+### リリースマネジメント
 
-As you prepare for a future release, you'll need to organize more than the tasks and features. It's important to create a clear workflow for your team, and to make sure that the work remains organized.
+将来のリリースの準備をするときは、タスクや機能以上のものを整理する必要があります。チームの明確なワークフローを作成し、作業が整理されていることを確認することが重要です。
 
-There are several strategies for managing releases. Some teams might use long-lived branches, like `production`, `dev`, and `main`. Some teams use simple feature branches, releasing from the main branch.
+リリースを管理する方法はいくつかあります。`production`, `dev`, `main`といった、存続期間の長いブランチを使用する場合もあれば、一部のチームは、シンプルな機能ブランチを利用し、メインブランチからリリースする場合もあります。
 
-No one strategy is better than another. We always recommend being intentional about branches and reducing long-lived branches whenever possible.
+1つの戦略が別の戦略よりも優れているということはありません。ですが、GitHubでは、可能な限り、ブランチについて意識的に考え、存続期間の長いブランチを減らすことを推奨しています。
 
-In this exercise, you'll use the `release-v1.0` branch to be your one long-lived branch per release version.
+この演習では、リリースバージョンごとに1つの長期ブランチを利用する戦略を採用し、`release-v1.0`ブランチをリリースブランチとして使用します。
 
-### Protected branches
+### 保護されたブランチ(Protected branches)
+`main`ブランチと同様に、リリースブランチも保護することができます。これは、強制プッシュや誤った削除からブランチを保護できることを意味します。このリポジトリでは既に構成済です。
 
-Like the `main` branch, you can protect release branches. This means you can protect branches from force pushes or accidental deletion. This is already configured in this repository.
+### 機能の追加
+リリースは通常、数多くの小さな変更で構成されます。バグを把握していないため、バージョン アップデートの前にゲームで更新するいくつかの機能に焦点を当てます。
 
-### Add a feature
+- ページの背景色を黒に更新する必要があります。
+- テキストの色を緑に変えるお手伝いをします。
 
-Releases are usually made of many smaller changes. Since we don't know of any bugs, we'll focus on a few features to update on our game before the version update.
+### ⌨️ Activity: `base.css`のアップデート
 
-- You should update the page background color to black.
-- I'll help you change the text colors to green.
+1. `release-v1.0`ブランチから新しいブランチを作成し、以下のように`base.css`内の`body`のCSS定義を変更します。これにより、ページの背景が黒に設定されます
 
-### :keyboard: Activity: Update `base.css`
-
-1. Create a new branch and change the `body` CSS declaration in `base.css` to match what is below. This will set the page background to black
-```
+```css
 body {
     background-color: black;
 }
 ```
-2. Open a pull request with `release-v1.0` as the `base` branch, and your new branch as `compare`
-3. Fill in the pull request template to describe your changes
+
+2. プルリクエストのページを開き、`release-v1.0`を`base`の欄に、新たに追加した機能ブランチを`compare`の欄に入力して、新しくプルリクエストとしてオープンしてください。
+3. プル リクエスト テンプレートに入力して、変更内容を説明します
 
 ### Merge the new feature to the release branch
 Even with releases, the GitHub flow is still an important strategy for working with your team. It's a good idea to use short-lived branches for quick feature additions and bug fixes.
