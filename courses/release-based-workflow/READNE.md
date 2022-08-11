@@ -101,17 +101,17 @@ body {
 ```
 
 2. プルリクエストのページを開き、`release-v1.0`を`base`の欄に、新たに追加した機能ブランチを`compare`の欄に入力して、新しくプルリクエストとしてオープンしてください。
-3. プル リクエスト テンプレートに入力して、変更内容を説明します
+3. プルリクエストのテンプレート変更内容の説明をに入力します。
 
-### Merge the new feature to the release branch
-Even with releases, the GitHub flow is still an important strategy for working with your team. It's a good idea to use short-lived branches for quick feature additions and bug fixes.
+### 新機能をリリースブランチにマージする
+GitHubのリリース機能があったとしても、GitHub flowはチームと連携するために未だ重要な戦略です。迅速な機能の追加とバグ修正のために、生存期間の短いブランチを使用することをお勧めします。
 
-Merge this feature pull request so that you can open the release pull request as early as possible.
+できるだけ早くリリースのプルリクエストをオープンすることができるように、この機能プルリクエストをマージしてみましょう。
 
-### :keyboard: Activity: Merge the pull request
+### ⌨️ Activity: プルリクエストをマージする
 
-1. Click **Merge pull request**, and delete your branch.
-1. Wait about 20 seconds then refresh this page for the next step.
+1.  **Merge pull request**をクリックし、ブランチを消去します。
+2. 約20秒待ってから、次のステップのためにこのページを更新します。
 
 </details>
 
