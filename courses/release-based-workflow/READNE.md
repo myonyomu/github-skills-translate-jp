@@ -22,10 +22,50 @@ GitHub Releases機能を使用すると、チームはプロジェクトの履�
 
 1. このイントロダクションの上部にある、**Use this template**ボタンを右クリックし、新しいタブでリンクを開きます。
    ![Use this template](https://user-images.githubusercontent.com/1221423/169618716-fb17528d-f332-4fc5-a11a-eaa23562665e.png)
-2. 新しく開いたタブで、手順に従って新しいリポジトリを作成します。(※元の文では明記されていませんが、このチュートリアルでは`Include all branches`のチェックが必須です。)
+2. 新しく開いたタブで、手順に従って新しいリポジトリを作成します。(※元の文では明記されていませんが、このチュートリアルでは`Include all branches`のチェックが必須です。また、テンプレート生成が原因で、手順書通りに進めると途中で詰まる部分があります。この解消のために、あらかじめ後に示す訳者注記の作業を行ってください)
    - パブリックリポジトリを作成することをお勧めします。――プライベートリポジトリの場合、[アクションにかかった時間分だけ請求が発生します](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions)。
    ![Create a new repository](https://user-images.githubusercontent.com/1221423/169618722-406dc508-add4-4074-83f0-c7a7ad87f6f3.png)
 3. 新しいリポジトリが作成されたら、約20秒待ってから、ページを更新します。新しいリポジトリのREADMEにある手順に従って操作を行ってください。
+
+### ※訳者注記：テンプレートからの作成時の前処理
+テンプレートでの作成は、テンプレートリポジトリ側のコミット履歴を引き継がないため、`release-v1.0`などのチュートリアルで利用するブランチの履歴が元のものと変わってしまいます。これが原因で、[提示されているプルリクエストのマージ作業がうまくいきません](https://qiita.com/shine10293/items/fb0912917afa609db5e3)。  
+回避方法としては2つあります。1つ目の方が楽ですが、チュートリアルと細かい点で差異が出るかもしれません。  
+1. [skills/release-based-workflow](https://github.com/skills/release-based-workflow)のページ上部にあるForkボタンからリポジトリをフォークする
+  - Copy the `main` branch only のチェックは外してください。
+2. テンプレートからのリポジトリ作成後、ローカルで以下の修正を行う。
+
+```shell
+git clone <your-tutorial-repository-url>
+cd <your-project-folder>
+git fetch --all
+git checkout release-v1.0
+git rebase main
+
+# -- ここで.github/STEPにコンフリクトが発生するので、1の数字だけファイルに残してファイルを保存 --
+git add .
+git rebase --continue
+
+# -- テンプレートから作成した自分のチュートリアルのリポジトリの画面を開き、ブランチ一覧の画面へ移動して、release-v1.0のブランチを消去する --
+
+git fetch --prune
+git push origin release-v1.0
+
+# release-v1.0と同様の作業をupdate-text-colorsブランチにも行う
+git checkout update-text-colors
+git rebase main
+
+# -- コンフリクト解消 --
+
+git add .
+git rebase --continue
+
+# -- リモートリポジトリのupdate-text-colorsブランチを消去 --
+
+git fetch --prune
+git push origin update-text-colors
+
+```
+
 <!--endstep0-->
 
 <!--Step 1-->
