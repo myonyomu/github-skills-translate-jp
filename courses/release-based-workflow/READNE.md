@@ -55,7 +55,7 @@ GitHubのリリースは、特定のコミットのことを指します。リ�
 
 大規模なリリースにリリースベースのワークフローを使用する前に、タグとリリースを作成しましょう。
 
-1. 新しいブラウザー タブを開き、このタブの指示を読みながら、2 番目のタブの手順に取り組みます。
+1. 新しいブラウザー タブを開き、このタブの指示を読みながら、2番目のタブの手順に取り組みます。
 2. このリポジトリの**Releases**ページに移動します。
   - リポジトリの上部にある**Code**タブをクリックできます。次に、リポジトリの説明の下にあるナビゲーション バーを見つけて、**0 releases**をクリックします。(※GitHubのUI変更で場所や表示が変わっている。リリースが存在しないときはリリース数が表示されなくなったため、2022/08現在では、Codeページ=>画面右側のペインからReleasesをクリックしてリリースページを開くことができる)
 3. **Create a new release**ボタンをクリックします
@@ -92,7 +92,7 @@ GitHubのリリースは、特定のコミットのことを指します。リ�
 
 ### ⌨️ Activity: `base.css`のアップデート
 
-1. `release-v1.0`ブランチから新しいブランチを作成し、以下のように`base.css`内の`body`のCSS定義を変更します。これにより、ページの背景が黒に設定されます
+1. `main`ブランチから新しいブランチを作成し、以下のように`base.css`内の`body`のCSS定義を変更します。これにより、ページの背景が黒に設定されます
 
 ```css
 body {
@@ -117,32 +117,32 @@ GitHubのリリース機能があったとしても、GitHub flowはチームと
 
 <!--Step 3-->
 <details id=3>
-<summary><h2>Step 3: Open a release pull request</h2></summary>
+<summary><h2>Step 3: リリースプルリクエストをオープンする</h2></summary>
 
-### Release branches and `main`
+### リリースブランチと`main`ブランチ
 
-You should open a pull request between your release branch and main as early as possible. It might be open for a long time, and that's okay.
+リリースブランチと`main`ブランチ間は、できるだけ早くプルリクエストをオープンすべきです。長い期間オープンのままになるかもしれませんが、問題はありません。
 
-In general, the pull request description can include:
-- A [reference to an issue](https://docs.github.com/en/articles/basic-writing-and-formatting-syntax/#mentioning-people-and-teams) that the pull request addresses.
-- A description of the changes proposed in the pull request.
-- [@mentions](https://docs.github.com/en/articles/basic-writing-and-formatting-syntax/#mentioning-people-and-teams) of the person or team responsible for reviewing proposed changes.
+一般的に、プルリクエストの説明には以下を含めることができます。
+- プルリクエストに関連する[Issueへの参照](https://docs.github.com/en/articles/basic-writing-and-formatting-syntax/#mentioning-people-and-teams)
+- プルリクエストで提案された変更の説明
+- 提案された変更のレビューを担当する、個人やチームへの[@メンション](https://docs.github.com/en/articles/basic-writing-and-formatting-syntax/#mentioning-people-and-teams)
 
-To expedite the creation of this pull request, I've added a pull request template to the repository. When you create a pull request, default text will automatically be displayed. This should help you identify and fill out all the necessary information. If you don't want to use the template content, just remove the text from the pull request and repace it with your pull request message.
+このプル リクエストの作成を迅速に行うために、プルリクエストのテンプレートをリポジトリに追加しました。プルリクエストを作成すると、デフォルトのテキストが自動的に表示されます。これは、必要なすべての情報を特定して入力するのに役立つでしょう。テンプレートコンテンツを使用したくない場合は、プルリクエストからテキストを削除し、望む形にプルリクエストメッセージを置き換えてください。
 
 ### :keyboard: Activity: Open a release pull request
-Let's make a new pull request comparing the `release-v1.0` branch to the `main` branch.
+`release-v1.0`ブランチと`main`ブランチを比較する、新しいプルリクエストを作成してみましょう。
 
-1. Open a new browser tab, and work on the steps in your second tab while you read the instructions in this tab
-1. Open a **new pull request** with `base: main` and `compare: release-v1.0`
-1. Ensure the title of your pull request is **Release v1.0**
-1. Include a detailed pull request body, an example is below
+1. 新しいブラウザタブを開き、このタブの指示を読みながら、新しく開いたタブで以下の手順を実行します。
+2. `base: main` `compare: release-v1.0`として**新しいプルリクエスト**をオープンします。
+3. プルリクエストのタイトルが**Release v1.0**であることを確認してください。
+4. プルリクエストの詳細を本文に含めます。例を以下に示します。
     ```
     ## Description: 
     - Changed page background color to black.
     - Changed game text color to green.
     ```
-1. Wait about 20 seconds then refresh this page for the next step
+5. 約20秒待ってから、次のステップのためにこのページを更新します。
 
 </details>
 
