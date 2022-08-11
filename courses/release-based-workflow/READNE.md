@@ -30,7 +30,7 @@ GitHub Releases機能を使用すると、チームはプロジェクトの履�
 ### ※訳者注記：テンプレートからの作成時の前処理
 テンプレートでの作成は、テンプレートリポジトリ側のコミット履歴を引き継がないため、`release-v1.0`などのチュートリアルで利用するブランチの履歴が元のものと変わってしまいます。これが原因で、[提示されているプルリクエストのマージ作業がうまくいきません](https://qiita.com/shine10293/items/fb0912917afa609db5e3)。  
 回避方法としては2つあります。1つ目の方が楽ですが、チュートリアルと細かい点で差異が出るかもしれません。  
-1. [skills/release-based-workflow](https://github.com/skills/release-based-workflow)のページ上部にあるForkボタンからリポジトリをフォークする
+1. テンプレートからの作成をやめ、[skills/release-based-workflow](https://github.com/skills/release-based-workflow)のページ上部にあるForkボタンからリポジトリをフォークする
   - Copy the `main` branch only のチェックは外してください。
 2. テンプレートからのリポジトリ作成後、ローカルで以下の修正を行う。
 
